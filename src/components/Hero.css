@@ -1,0 +1,141 @@
+.neural-network {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #041322, #0a2440);
+}
+
+.node {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 102, 204, 0.6);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.connection {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.2), transparent);
+  transform-origin: left;
+  animation: connect 3s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+@keyframes connect {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
+/* Grid Pattern Background */
+.grid-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #041322, #0a2440);
+  overflow: hidden;
+}
+
+.grid-pattern::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background-image: 
+    linear-gradient(rgba(0, 102, 204, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 102, 204, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Particles Background */
+.particles-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #041322, #0a2440);
+  overflow: hidden;
+}
+
+.particles-background::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(0, 102, 204, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: particlesFloat 15s linear infinite;
+}
+
+.particles-background::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(0, 102, 204, 0.15) 1px, transparent 1px);
+  background-size: 45px 45px;
+  animation: particlesFloat 20s linear infinite reverse;
+}
+
+@keyframes particlesFloat {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(0) translateX(20px);
+  }
+  75% {
+    transform: translateY(20px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 0;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
