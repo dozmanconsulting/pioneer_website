@@ -10,7 +10,6 @@ const Navbar = () => {
   const navigation = [
     { name: 'Home', to: '/' },
     { name: 'Solutions', to: '/solutions' },
-    { name: 'Why CloudPioneer', to: '/why-cloudpioneer' },
     { name: 'Pricing', to: '/pricing' },
     { name: 'Blog', to: '/blog' },
     { name: 'Contact', to: '/contact' },
