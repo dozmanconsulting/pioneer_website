@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Solutions from './components/Solutions';
 import Pricing from './components/Pricing';
 import Blog from './components/Blog';
+import BlogPost from './components/BlogPost';
 import Home from './components/Home';
 import UnderConstruction from './components/UnderConstruction';
 import Services from './components/Services';
@@ -45,6 +46,7 @@ const AppRoutes = () => {
       <Route path="/why-cloudpioneer" element={<WhyCloudPioneer />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:postId" element={<BlogPost />} />
       <Route path="/services" element={<Services />} />
       <Route path="/about" element={<About />} />
       <Route path="/onboarding/api-key-setup" element={<ApiKeySetup />} />

@@ -1,57 +1,61 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { blogPosts } from '../data/blogPosts';
 
 const Blog = () => {
-  const blogPosts = [
-    {
-      title: 'Cloud Cost Optimization Best Practices',
-      date: 'February 11, 2025',
-      excerpt: 'Learn how to reduce your cloud costs by up to 30% with these proven strategies...',
-      author: 'John Smith',
-      category: 'Cost Optimization'
-    },
-    {
-      title: 'The Future of SRE Automation',
-      date: 'February 10, 2025',
-      excerpt: 'Discover how AI is transforming Site Reliability Engineering...',
-      author: 'Sarah Johnson',
-      category: 'SRE'
-    },
-    {
-      title: 'Cloud Security Best Practices',
-      date: 'February 9, 2025',
-      excerpt: 'Essential security measures every cloud-native application should implement...',
-      author: 'Mike Wilson',
-      category: 'Security'
-    }
-  ];
-
   return (
-    <div className="py-24 bg-gray-50">
+    <div className="bg-gray-50 min-h-screen py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Latest from Our Blog
-          </h2>
-          <p className="mt-4 text-xl text-gray-500">
-            Insights and updates from the CloudPioneer team
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            CloudPioneer Blog
+          </h1>
+          <p className="text-xl text-gray-600 mb-12">
+            Insights and best practices for cloud optimization and management
           </p>
         </div>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.map((post, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {blogPosts.map((post) => (
+            <Link
+              key={post.id}
+              to={`/blog/${post.id}`}
+              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
               <div className="p-6">
-                <div className="text-sm text-blue-600 mb-1">{post.category}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 text-sm font-medium text-blue-600 bg-blue-100 rounded-full">
+                    {post.category}
+                  </span>
+                  <span className="text-sm text-gray-500">{post.readTime}</span>
+                </div>
+                <h2 className="text-xl font-bold text-gray-900 mb-2">
                   {post.title}
-                </h3>
-                <p className="text-gray-500 mb-4">{post.excerpt}</p>
+                </h2>
+                <p className="text-gray-600 mb-4">
+                  {post.excerpt}
+                </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">{post.author}</span>
-                  <span className="text-sm text-gray-400">{post.date}</span>
+                  <div className="flex items-center">
+                    <div className="text-sm">
+                      <p className="text-gray-900 font-medium">
+                        {post.author}
+                      </p>
+                      <p className="text-gray-500">
+                        {new Date(post.date).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric'
+                        })}
+                      </p>
+                    </div>
+                  </div>
+                  <span className="text-blue-600 hover:text-blue-700">
+                    Read more →
+                  </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
