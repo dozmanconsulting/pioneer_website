@@ -12,49 +12,49 @@
   box-shadow: 0 0 0 rgba(59, 130, 246, 0.4);
 }
 
-/* Positioning for the star pattern */
+/* Positioning for the hexagonal pattern */
 .top {
-  top: 0;
+  top: 5%;
   left: 50%;
-  transform: translateX(-50%) translateY(40px);
+  transform: translateX(-50%);
 }
 
 .top-right {
-  top: 15%;
-  right: 5%;
+  top: 25%;
+  right: 10%;
 }
 
 .right {
   top: 50%;
-  right: 0;
-  transform: translateY(-50%) translateX(-40px);
+  right: 5%;
+  transform: translateY(-50%);
 }
 
 .bottom-right {
-  bottom: 15%;
-  right: 5%;
+  bottom: 25%;
+  right: 10%;
 }
 
 .bottom {
-  bottom: 0;
+  bottom: 5%;
   left: 50%;
-  transform: translateX(-50%) translateY(-40px);
+  transform: translateX(-50%);
 }
 
 .bottom-left {
-  bottom: 15%;
-  left: 5%;
+  bottom: 25%;
+  left: 10%;
 }
 
 .left {
   top: 50%;
-  left: 0;
-  transform: translateY(-50%) translateX(40px);
+  left: 5%;
+  transform: translateY(-50%);
 }
 
 .top-left {
-  top: 15%;
-  left: 5%;
+  top: 25%;
+  left: 10%;
 }
 
 /* Animations */
@@ -90,32 +90,47 @@
   }
 }
 
+/* Hover effect */
+.feature-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  z-index: 10;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1280px) {
   .feature-card {
-    width: 240px !important;
+    width: 280px !important;
   }
   
   .top-right {
-    right: 2%;
+    right: 8%;
   }
   
   .bottom-right {
-    right: 2%;
+    right: 8%;
   }
   
   .bottom-left {
-    left: 2%;
-  }
-  
-  .top-left {
-    left: 2%;
+    left: 8%;
   }
 }
 
 @media (max-width: 1024px) {
   .feature-card {
-    width: 220px !important;
+    width: 250px !important;
+  }
+
+  .top {
+    top: 10%;
+  }
+
+  .bottom {
+    bottom: 10%;
   }
 }
 
@@ -136,6 +151,10 @@
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px) !important;
   }
 
   .center-circle {

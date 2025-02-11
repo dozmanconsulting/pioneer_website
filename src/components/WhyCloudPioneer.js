@@ -4,33 +4,33 @@ import './WhyCloudPioneer.css';
 const WhyCloudPioneer = () => {
   const features = [
     {
-      title: 'AI-Powered Optimization',
-      description: 'Leverage cutting-edge artificial intelligence to automatically optimize your cloud resources, reducing costs and improving performance.',
-      icon: '🤖',
+      title: 'Cost Optimization',
+      description: 'Reduce cloud costs by up to 30% with our intelligent optimization engine',
+      icon: '💰',
       position: 'top'
     },
     {
-      title: 'Real-Time Monitoring',
-      description: 'Get instant alerts and insights about your cloud infrastructure with our advanced monitoring system.',
+      title: 'Business Intelligence',
+      description: 'Make data-driven decisions with real-time analytics and insights',
       icon: '📊',
       position: 'top-right'
     },
     {
-      title: 'Cost Management',
-      description: 'Track and optimize your cloud spending with intelligent cost allocation and forecasting tools.',
-      icon: '💰',
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with continuous compliance monitoring',
+      icon: '🔒',
       position: 'right'
     },
     {
-      title: 'Automated Remediation',
-      description: 'Automatically detect and fix issues before they impact your business with our self-healing infrastructure.',
-      icon: '⚡',
+      title: 'Automated Management',
+      description: 'Streamline operations with AI-powered automation',
+      icon: '🤖',
       position: 'bottom-right'
     },
     {
-      title: 'Business Intelligence',
-      description: 'Gain deep insights into your cloud resource usage, performance metrics, and cost patterns through interactive dashboards and detailed analytics reports.',
-      icon: '📈',
+      title: 'Performance Optimization',
+      description: 'Maximize efficiency with intelligent resource allocation',
+      icon: '⚡',
       position: 'bottom'
     },
     {
@@ -38,18 +38,6 @@ const WhyCloudPioneer = () => {
       description: '24/7 access to cloud experts and technical resources',
       icon: '👥',
       position: 'bottom-left'
-    },
-    {
-      title: 'Multi-Cloud Support',
-      description: 'Unified management across AWS, Azure, and Google Cloud',
-      icon: '☁️',
-      position: 'left'
-    },
-    {
-      title: 'Scalability',
-      description: 'Seamlessly scale your infrastructure as your business grows',
-      icon: '📈',
-      position: 'top-left'
     }
   ];
 
