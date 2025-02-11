@@ -3,7 +3,7 @@ export const blogPosts = [
     id: 'cloud-cost-optimization',
     title: 'Cloud Cost Optimization Best Practices',
     excerpt: 'Learn how to reduce your cloud costs by up to 30% with these proven strategies...',
-    author: 'John Smith',
+    author: 'Shedrack Chiedozie Aji',
     date: '2025-02-11',
     category: 'Cost Optimization',
     content: `

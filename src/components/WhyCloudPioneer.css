@@ -1,6 +1,10 @@
 .feature-card {
   opacity: 0;
   animation: fadeIn 0.5s ease forwards;
+  width: 280px !important;
+  position: absolute;
+  transform-origin: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .feature-icon {
@@ -10,51 +14,56 @@
 .center-circle {
   animation: pulse 2s infinite;
   box-shadow: 0 0 0 rgba(59, 130, 246, 0.4);
+  z-index: 10;
 }
 
-/* Positioning for the hexagonal pattern */
+/* Circular positioning */
 .top {
-  top: 5%;
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(60px);
 }
 
 .top-right {
-  top: 25%;
-  right: 10%;
+  top: 15%;
+  right: 15%;
+  transform: translate(0, -50%);
 }
 
 .right {
   top: 50%;
-  right: 5%;
-  transform: translateY(-50%);
+  right: 0;
+  transform: translateY(-50%) translateX(-60px);
 }
 
 .bottom-right {
-  bottom: 25%;
-  right: 10%;
+  bottom: 15%;
+  right: 15%;
+  transform: translate(0, 50%);
 }
 
 .bottom {
-  bottom: 5%;
+  bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-60px);
 }
 
 .bottom-left {
-  bottom: 25%;
-  left: 10%;
+  bottom: 15%;
+  left: 15%;
+  transform: translate(0, 50%);
 }
 
 .left {
   top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
+  left: 0;
+  transform: translateY(-50%) translateX(60px);
 }
 
 .top-left {
-  top: 25%;
-  left: 10%;
+  top: 15%;
+  left: 15%;
+  transform: translate(0, -50%);
 }
 
 /* Animations */
@@ -91,46 +100,52 @@
 }
 
 /* Hover effect */
-.feature-card {
-  transition: all 0.3s ease-in-out;
-}
-
 .feature-card:hover {
-  transform: translateY(-10px) !important;
+  transform: scale(1.05) !important;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  z-index: 10;
+  z-index: 20;
 }
 
 /* Responsive adjustments */
+@media (max-width: 1440px) {
+  .feature-card {
+    width: 260px !important;
+  }
+  
+  .top {
+    transform: translateX(-50%) translateY(40px);
+  }
+  
+  .right {
+    transform: translateY(-50%) translateX(-40px);
+  }
+  
+  .bottom {
+    transform: translateX(-50%) translateY(-40px);
+  }
+}
+
 @media (max-width: 1280px) {
   .feature-card {
-    width: 280px !important;
+    width: 240px !important;
   }
   
   .top-right {
-    right: 8%;
+    right: 10%;
   }
   
   .bottom-right {
-    right: 8%;
+    right: 10%;
   }
   
   .bottom-left {
-    left: 8%;
+    left: 10%;
   }
 }
 
 @media (max-width: 1024px) {
   .feature-card {
-    width: 250px !important;
-  }
-
-  .top {
-    top: 10%;
-  }
-
-  .bottom {
-    bottom: 10%;
+    width: 220px !important;
   }
 }
 
