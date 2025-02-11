@@ -1,3 +1,9 @@
+.container {
+  position: relative;
+  min-height: 800px;
+  margin: 2rem auto;
+}
+
 .feature-card {
   opacity: 0;
   animation: fadeIn 0.5s ease forwards;
@@ -12,22 +18,46 @@
 }
 
 .center-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   animation: pulse 2s infinite;
   box-shadow: 0 0 0 rgba(59, 130, 246, 0.4);
   z-index: 10;
 }
 
-/* Circular positioning */
+/* Circular positioning using absolute coordinates */
 .top {
-  top: 0;
+  top: 5%;
   left: 50%;
-  transform: translateX(-50%) translateY(60px);
+  transform: translateX(-50%);
 }
 
 .top-right {
-  top: 15%;
-  right: 15%;
-  transform: translate(0, -50%);
+  top: 25%;
+  right: 20%;
+}
+
+.bottom-right {
+  bottom: 25%;
+  right: 20%;
+}
+
+.bottom {
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom-left {
+  bottom: 25%;
+  left: 20%;
+}
+
+.top-left {
+  top: 25%;
+  left: 20%;
 }
 
 .right {
@@ -36,34 +66,10 @@
   transform: translateY(-50%) translateX(-60px);
 }
 
-.bottom-right {
-  bottom: 15%;
-  right: 15%;
-  transform: translate(0, 50%);
-}
-
-.bottom {
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(-60px);
-}
-
-.bottom-left {
-  bottom: 15%;
-  left: 15%;
-  transform: translate(0, 50%);
-}
-
 .left {
   top: 50%;
   left: 0;
   transform: translateY(-50%) translateX(60px);
-}
-
-.top-left {
-  top: 15%;
-  left: 15%;
-  transform: translate(0, -50%);
 }
 
 /* Animations */
@@ -101,44 +107,44 @@
 
 /* Hover effect */
 .feature-card:hover {
-  transform: scale(1.05) !important;
+  transform: scale(1.05);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   z-index: 20;
 }
 
 /* Responsive adjustments */
 @media (max-width: 1440px) {
+  .container {
+    min-height: 700px;
+  }
+  
   .feature-card {
     width: 260px !important;
   }
   
-  .top {
-    transform: translateX(-50%) translateY(40px);
+  .top-right, .bottom-right {
+    right: 15%;
   }
   
-  .right {
-    transform: translateY(-50%) translateX(-40px);
-  }
-  
-  .bottom {
-    transform: translateX(-50%) translateY(-40px);
+  .top-left, .bottom-left {
+    left: 15%;
   }
 }
 
 @media (max-width: 1280px) {
+  .container {
+    min-height: 600px;
+  }
+  
   .feature-card {
     width: 240px !important;
   }
   
-  .top-right {
+  .top-right, .bottom-right {
     right: 10%;
   }
   
-  .bottom-right {
-    right: 10%;
-  }
-  
-  .bottom-left {
+  .top-left, .bottom-left {
     left: 10%;
   }
 }
@@ -150,6 +156,10 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    min-height: auto;
+  }
+
   .relative {
     height: auto !important;
     display: flex;
