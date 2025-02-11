@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import './UnderConstruction.css';
 
@@ -7,7 +7,6 @@ const UnderConstruction = () => {
   const [nodes, setNodes] = useState([]);
   const [connections, setConnections] = useState([]);
   const { user } = useAuth();
-  const navigate = useNavigate();
 
   useEffect(() => {
     // Generate random nodes
