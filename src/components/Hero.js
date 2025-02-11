@@ -92,10 +92,10 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-          Cloud Optimization Made Simple
+          Cut Your Cloud Costs & Fix Issues Instantly with AI-Driven Optimization
         </h1>
-        <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-          Optimize your cloud infrastructure with AI-powered insights and automation
+        <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+          CloudPioneer AI helps businesses eliminate wasted cloud spend, automate resource management, and resolve cloud issues in real-time—all with zero manual effort.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
