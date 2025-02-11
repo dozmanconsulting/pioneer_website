@@ -1,6 +1,29 @@
 import React from 'react';
 
 const Solutions = () => {
+  const features = [
+    {
+      title: 'Intelligent Resource Management',
+      description: 'AI-driven optimization of cloud resources for maximum efficiency',
+      icon: '🤖'
+    },
+    {
+      title: 'Cost Control',
+      description: 'Automated resource scaling based on actual usage patterns',
+      icon: '💰'
+    },
+    {
+      title: 'Real-time Analytics',
+      description: 'Actionable insights for better decision-making',
+      icon: '📊'
+    },
+    {
+      title: 'SRE Automation',
+      description: 'Proactive incident detection and automated resolution',
+      icon: '⚡'
+    }
+  ];
+
   const sections = [
     {
       title: 'Compute Services',
@@ -155,44 +178,124 @@ const Solutions = () => {
   ];
 
   return (
-    <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AWS Cloud Resources & Cost Optimization Strategies
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Cloud Pioneer integrates with a wide range of AWS cloud resources, offering automated cost optimization 
-            and proactive resource management. Below is a detailed list of AWS resources and how Cloud Pioneer can 
-            optimize and manage them efficiently.
-          </p>
+    <div className="pt-16 bg-gray-50">
+      {/* Hero Section */}
+      <div className="bg-[#041322] text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl">
+              Intelligent Cloud Management Solution
+            </h1>
+            <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+              Revolutionize how you manage your cloud infrastructure with advanced AI and machine learning.
+            </p>
+          </div>
         </div>
+      </div>
 
-        <div className="space-y-12">
-          {sections.map((section, idx) => (
-            <div key={idx} className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="bg-blue-600 px-6 py-4">
-                <h2 className="text-2xl font-semibold text-white">{section.title}</h2>
+      {/* Challenge Section */}
+      <div className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">
+            The Challenge
+          </h2>
+          <div className="bg-gray-50 rounded-lg p-8">
+            <ul className="space-y-4">
+              {[
+                'Limited visibility into cloud resources',
+                'Unnecessary costs from unused infrastructure',
+                'Frequent downtime from resource failures',
+                'Manual and time-consuming incident response',
+                'Lack of proactive resource optimization'
+              ].map((challenge, index) => (
+                <li key={index} className="flex items-start">
+                  <svg className="h-6 w-6 text-red-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                  <span className="text-lg text-gray-700">{challenge}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <div className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">
+            Our Solution
+          </h2>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-8">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
               </div>
-              <div className="divide-y divide-gray-200">
-                {section.resources.map((resource, resourceIdx) => (
-                  <div key={resourceIdx} className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">{resource.name}</h3>
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="text-lg font-medium text-blue-600 mb-2">Cost Optimization</h4>
-                        <p className="text-gray-600">{resource.optimization}</p>
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-medium text-green-600 mb-2">Automated Remediation</h4>
-                        <p className="text-gray-600">{resource.remediation}</p>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* AWS Resources Section */}
+      <div className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
+              AWS Cloud Resources & Cost Optimization Strategies
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Cloud Pioneer integrates with a wide range of AWS cloud resources, offering automated cost optimization 
+              and proactive resource management. Below is a detailed list of AWS resources and how Cloud Pioneer can 
+              optimize and manage them efficiently.
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            {sections.map((section, idx) => (
+              <div key={idx} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="bg-blue-600 px-6 py-4">
+                  <h3 className="text-2xl font-semibold text-white">{section.title}</h3>
+                </div>
+                <div className="divide-y divide-gray-200">
+                  {section.resources.map((resource, resourceIdx) => (
+                    <div key={resourceIdx} className="p-6">
+                      <h4 className="text-xl font-semibold text-gray-900 mb-4">{resource.name}</h4>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div>
+                          <h5 className="text-lg font-medium text-blue-600 mb-2">Cost Optimization</h5>
+                          <p className="text-gray-600">{resource.optimization}</p>
+                        </div>
+                        <div>
+                          <h5 className="text-lg font-medium text-green-600 mb-2">Automated Remediation</h5>
+                          <p className="text-gray-600">{resource.remediation}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="py-16 bg-[#041322]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-extrabold text-white mb-8">
+            Ready to Optimize Your Cloud Infrastructure?
+          </h2>
+          <a
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-[#041322] bg-white hover:bg-gray-100"
+          >
+            Get Started
+            <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
