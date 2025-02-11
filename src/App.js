@@ -14,6 +14,7 @@ import Services from './components/Services';
 import About from './components/About';
 import ApiKeySetup from './components/onboarding/ApiKeySetup';
 import MfaSetup from './components/onboarding/MfaSetup';
+import WhyCloudPioneer from './components/WhyCloudPioneer';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 
 // Protected Route component
@@ -41,6 +42,7 @@ const AppRoutes = () => {
       <Route path="/signup" element={user ? <Navigate to="/dashboard" /> : <Signup />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/solutions" element={<Solutions />} />
+      <Route path="/why-cloudpioneer" element={<WhyCloudPioneer />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/services" element={<Services />} />
